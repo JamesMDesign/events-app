@@ -25,43 +25,56 @@ function Login(props) {
 
   return (
     <>
-<div className="pageContainer">
-    <div className="groupContainer">
-
-    <div className="welcome-title">
-        <h1>Welcome to Events App!</h1>
-      </div>
-    <div className="welcome-paragraph">
-        <h2>Please login to continue</h2>
-      </div>
-    <div className="loginWrapper">
-      <div className="loginForm">
-      <div className="login-title">
-        <h3>Login</h3>
-      </div>
-      <Form onSubmit={(e) => submit(e)}>
-        <Form.Group className="mb-3" controlId="formUsername">
-          <div className="usernameLabel">
-            <Form.Label></Form.Label>
+      <div className="pageContainer">
+        <div className="groupContainer">
+          <div className="welcome-title">
+            <h1>Welcome to Events App!</h1>
           </div>
-          <Form.Control placeholder="username" name="username" disabled={disabled}/>
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formPassword">
-          <div className="passwordLabel">
-            <Form.Label></Form.Label>
+          <div className="welcome-paragraph">
+            <h2>Please login to continue</h2>
           </div>
-          <Form.Control placeholder="password" type="password" name="password" disabled={disabled}/>
-        </Form.Group>
+          <div className="loginWrapper">
+            <div className="loginForm">
+              <div className="login-title">
+                <h3>Login</h3>
+              </div>
+              <Form onSubmit={(e) => submit(e)}>
+                <Form.Group className="mb-3" controlId="formUsername">
+                  <div className="usernameLabel">
+                    <Form.Label></Form.Label>
+                  </div>
+                  <Form.Control
+                    placeholder="username"
+                    name="username"
+                    disabled={disabled}
+                  />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formPassword">
+                  <div className="passwordLabel">
+                    <Form.Label></Form.Label>
+                  </div>
+                  <Form.Control
+                    placeholder="password"
+                    type="password"
+                    name="password"
+                    disabled={disabled}
+                  />
+                </Form.Group>
 
-        <div className="loginButton">
-          <Button variant="primary" type="submit" className="loginBtn" disabled={disabled}>
-            Login
-          </Button>
+                <div className="loginButton">
+                  <Button
+                    variant="primary"
+                    type="submit"
+                    className="loginBtn"
+                    disabled={disabled}
+                  >
+                    Login
+                  </Button>
+                </div>
+              </Form>
+            </div>
+          </div>
         </div>
-      </Form>
-      </div>
-      </div>
-      </div>
       </div>
     </>
   );
