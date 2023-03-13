@@ -1,6 +1,6 @@
 import axios from "axios";
 import { toast } from "react-toastify";
-const url = "https://backend-irz8.onrender.com/";
+const url = "https://backend-irz8.onrender.com";
 
 export class ApiClient {
   constructor(tokenProvider, logoutHandler) {
